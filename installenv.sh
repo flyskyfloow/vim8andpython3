@@ -42,3 +42,7 @@ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.t
 # git submodule update --init --recursive
 # python3 install.py
 
+# python3 lib 可以添加到/etc/profile
+# 或者使用 vim .bashrc  
+#alias vimpy='export LD_LIBRARY_PATH=/usr/local/lib && /opt/vim8/bin/vim'
+
