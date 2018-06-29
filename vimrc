@@ -1,6 +1,13 @@
+" 调整xshell的光标适应书写
+" http://www.xshellcn.com/wenti/xhu-sgbh.html
 set nocompatible              " required
+set autoindent
+set tabstop=4
 filetype off                  " required
-
+" 打开鼠标可复制
+set mouse=v
+" 设置突出显示当前行
+set cursorline  
 "设置Vundle的运行路径
 set rtp+=/opt/vim8/bundle/Vundle.vim
 "设置插件的安装路径,vundle插件起始标志
@@ -12,7 +19,7 @@ Plugin 'scrooloose/nerdtree'
 "使用tab键切换窗口与目录树
 Plugin 'jistr/vim-nerdtree-tabs'
 "添加jedi-vim代码补全插件
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 "python语法检测
 Plugin 'scrooloose/syntastic'
@@ -30,20 +37,25 @@ Plugin 'kien/ctrlp.vim'
 "Powerline状态栏
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "你的所有插件需要在下面这行之前
+"缩进指示线
+Plugin 'Yggdroot/indentLine'
+"自动依照pep8的标准自动格式化代码
+Plugin 'tell-k/vim-autopep8'
 call vundle#end() 
 
 "设置分割窗口
-set splitbelow
-set splitright
+"set splitbelow
+"set splitright
 "设置窗口移动快捷键
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 "设置按F2启动NerdTree
 map <F2> :NERDTreeToggle<CR>
-
+map    w-  :vertical resize -5<CR>
+map <F8> :w<cr>: !python3 %<cr>
 "youcompleteme  默认tab  s-tab 和自动补全冲突
 ""let g:ycm_key_list_select_completion=['<c-n>']
 "let g:ycm_key_list_select_completion = ['<Down>']
