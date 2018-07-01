@@ -55,7 +55,7 @@ call vundle#end()
 "设置按F2启动NerdTree
 map <F2> :NERDTreeToggle<CR>
 map    w-  :vertical resize -5<CR>
-map <F8> :w<cr>: !python3 %<cr>
+map <F5> :w<CR>:!python %<CR>
 "youcompleteme  默认tab  s-tab 和自动补全冲突
 ""let g:ycm_key_list_select_completion=['<c-n>']
 "let g:ycm_key_list_select_completion = ['<Down>']
@@ -72,7 +72,7 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 "force recomile with syntastic
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>    
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>    
 "nnoremap <leader>lo :lopen<CR> "open locationlist
 "nnoremap <leader>lc :lclose<CR>    "close locationlist
 inoremap <leader><leader> <C-x><C-o>
@@ -87,13 +87,13 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 "设置主题颜色，以及设置快捷键F5
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
-call togglebg#map("<F5>")
+"if has('gui_running')
+"  set background=dark
+"  colorscheme solarized
+"else
+"  colorscheme zenburn
+"endif
+"call togglebg#map("<F3>")
 
 "开启代码折叠
 set foldmethod=indent
